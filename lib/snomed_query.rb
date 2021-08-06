@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require_relative "snomed_query/version"
+require_relative 'snomed_query/value_set'
+require_relative 'snomed_query/operation_outcome'
 require 'faraday'
 require 'json'
 
@@ -50,6 +52,10 @@ module SnomedQuery
     build_uri_and_send(">>!#{code}")
   end
 
+  def raw_query(query)
+    build_uri_and_send(query)
+  end
+
   private
 
   def build_uri_and_send(ecl_query)
@@ -73,11 +79,11 @@ module SnomedQuery
   end
 
   def handle_response(response)
-    parsed_response = JSON.parse(response.body)
+    parsed_response = JSON.parse(response.body).transform_keys(&:to_sym)
 
-    return parsed_response if response.success?
+    return ValueSet.new(**parsed_response) if response.success?
 
-    raise SnomedQuery::Error.new(parsed_response.dig('issue').first.dig('diagnostics'))
+    raise SnomedQuery::Error.new(OperationOutcome.new(**parsed_response).error_message)
   end 
 
   def snomed_variant
