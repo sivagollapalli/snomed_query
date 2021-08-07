@@ -11,6 +11,7 @@ require 'faraday'
 
 module SnomedQuery
   SNOMED_VARIANT = 'http://snomed.info/sct'.freeze
+  SYNONYM_SNOMED_CODE = '900000000000013009'.freeze
 
   class Error < StandardError
     attr_accessor :msg
@@ -18,6 +19,20 @@ module SnomedQuery
     def initialize(msg)
       @msg = msg
       super(msg)
+    end
+  end
+
+  class CustomStruct < OpenStruct
+    def syn
+      parts = []
+
+      parts << part if name == 'designation'
+      parts = parts.each do |part|
+        part.select do |p|
+          p.code == SYNONYM_SNOMED_CODE
+        end
+      end
+      parts.flatten.collect(&:valueString).compact
     end
   end
 end

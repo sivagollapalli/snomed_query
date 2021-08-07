@@ -11,6 +11,13 @@ module SnomedQuery
         handle_response(response)
       end
 
+      def synonyms(identifier)
+        JSON.parse(
+          lookup(identifier).parameter.to_json, 
+          object_class: CustomStruct
+        ).collect(&:syn).flatten
+      end
+
       def handle_response(response)
         parsed_response = JSON.parse(response.body).transform_keys(&:to_sym)
         return Parameter.new(**parsed_response) if response.success?
