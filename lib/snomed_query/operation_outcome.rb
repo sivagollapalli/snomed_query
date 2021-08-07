@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SnomedQuery
 	class OperationOutcome
 		attr_accessor :resource_type, :issue
