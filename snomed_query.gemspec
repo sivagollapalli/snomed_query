@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Siva Gollapalli"]
   spec.email         = ["sivagollapalli88@gmail.com"]
 
-  spec.summary       = "Queries the Snomed terminology server"
-  spec.description   = "Queries the Snomed terminology server"
+  spec.summary       = "A set of utility functions to query the Snomed terminology server"
+  spec.description   = "A set of utility functions to query the Snomed terminology server"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
