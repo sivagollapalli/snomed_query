@@ -8,3 +8,15 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Naming/VariableName:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false

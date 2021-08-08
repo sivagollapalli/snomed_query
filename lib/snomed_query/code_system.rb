@@ -13,7 +13,7 @@ module SnomedQuery
 
       def synonyms(identifier)
         JSON.parse(
-          lookup(identifier).parameter.to_json, 
+          lookup(identifier).parameter.to_json,
           object_class: CustomStruct
         ).collect(&:syn).flatten
       end
@@ -22,12 +22,12 @@ module SnomedQuery
         parsed_response = JSON.parse(response.body).transform_keys(&:to_sym)
         return Parameter.new(**parsed_response) if response.success?
 
-        raise SnomedQuery::Error.new(OperationOutcome.new(**parsed_response).error_message)
+        raise SnomedQuery::Error, OperationOutcome.new(**parsed_response).error_message
       end
 
       def build_fhir_uri(identifier)
         URI::HTTP.build(
-          path: '/fhir/CodeSystem/$lookup', 
+          path: "/fhir/CodeSystem/$lookup",
           query: "url=#{SNOMED_VARIANT}&code=#{identifier}"
         )
       end
