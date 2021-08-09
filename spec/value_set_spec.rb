@@ -85,7 +85,7 @@ RSpec.describe SnomedQuery::ValueSet do
       }
     }
 
-    allow(described_class.client).to receive(:get).and_return(response.to_json)
+    allow_any_instance_of(Faraday::Connection).to receive(:get).and_return(Faraday::Response.new(status: 200, body: response.to_json))
     actual_reponse = described_class.send(:build_uri_and_send, 22_298_006)
     expect(actual_reponse.results.first).to eq(response.dig(:expansion, :contains).first.transform_keys(&:to_s))
   end
