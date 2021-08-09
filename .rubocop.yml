@@ -20,3 +20,6 @@ Naming/VariableName:
 
 Gemspec/RequiredRubyVersion:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
