@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/sivagollapalli/snomed_query/tree/master.svg?style=svg)](https://circleci.com/gh/sivagollapalli/snomed_query/tree/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4874e46f608eed9c666a/maintainability)](https://codeclimate.com/github/sivagollapalli/snomed_query/maintainability)
+
 # SnomedQuery
 
 A set of utility functions to query the Snomed terminology server. Currently it is tested against https://github.com/IHTSDO/snowstorm server only. 
