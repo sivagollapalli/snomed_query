@@ -89,4 +89,20 @@ RSpec.describe SnomedQuery::ValueSet do
     actual_reponse = described_class.send(:build_uri_and_send, 22_298_006)
     expect(actual_reponse.results.first).to eq(response.dig(:expansion, :contains).first.transform_keys(&:to_s))
   end
+
+  it "should return SnomedQuery::Error upon API failure" do
+    response = {
+      "resourceType": "OperationOutcome",
+      "issue": [
+        {
+          "severity": "error",
+          "code": "processing",
+          "diagnostics": "Failed to call access method: org.snomed.langauges.ecl.ECLException: Failed to parse ECL 'test'"
+        }
+      ]
+    }
+
+    allow_any_instance_of(Faraday::Connection).to receive(:get).and_return(Faraday::Response.new(status: 500, body: response.to_json))
+    expect { described_class.send(:build_uri_and_send, "test") }.to raise_error(SnomedQuery::Error, "Failed to call access method: org.snomed.langauges.ecl.ECLException: Failed to parse ECL 'test'")
+  end
 end
