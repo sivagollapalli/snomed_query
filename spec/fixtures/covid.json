@@ -1,0 +1,252 @@
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "version",
+            "valueString": "http://snomed.info/sct"
+        },
+        {
+            "name": "display",
+            "valueString": "Disease caused by severe acute respiratory syndrome coronavirus 2"
+        },
+        {
+            "name": "active",
+            "valueBoolean": true
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "effectiveTime"
+                },
+                {
+                    "name": "valueString",
+                    "valueString": "20200131"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "moduleId"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "900000000000207008"
+                }
+            ]
+        },
+        {
+            "name": "designation",
+            "part": [
+                {
+                    "name": "language",
+                    "valueCode": "en"
+                },
+                {
+                    "name": "use",
+                    "valueCoding": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    }
+                },
+                {
+                    "name": "value",
+                    "valueString": "COVID-19"
+                }
+            ]
+        },
+        {
+            "name": "designation",
+            "part": [
+                {
+                    "name": "language",
+                    "valueCode": "en"
+                },
+                {
+                    "name": "use",
+                    "valueCoding": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000003001",
+                        "display": "Fully specified name"
+                    }
+                },
+                {
+                    "name": "value",
+                    "valueString": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+                }
+            ]
+        },
+        {
+            "name": "designation",
+            "part": [
+                {
+                    "name": "language",
+                    "valueCode": "en"
+                },
+                {
+                    "name": "use",
+                    "valueCoding": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    }
+                },
+                {
+                    "name": "value",
+                    "valueString": "Disease caused by Severe acute respiratory syndrome coronavirus 2"
+                }
+            ]
+        },
+        {
+            "name": "designation",
+            "part": [
+                {
+                    "name": "language",
+                    "valueCode": "en"
+                },
+                {
+                    "name": "use",
+                    "valueCoding": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    }
+                },
+                {
+                    "name": "value",
+                    "valueString": "Disease caused by 2019 novel coronavirus"
+                }
+            ]
+        },
+        {
+            "name": "designation",
+            "part": [
+                {
+                    "name": "language",
+                    "valueCode": "en"
+                },
+                {
+                    "name": "use",
+                    "valueCoding": {
+                        "system": "http://snomed.info/sct",
+                        "code": "900000000000013009",
+                        "display": "Synonym"
+                    }
+                },
+                {
+                    "name": "value",
+                    "valueString": "Disease caused by 2019-nCoV"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "parent"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "186747009"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "880529761000119102"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "1240541000000107"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "119981000146107"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "119751000146104"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "1119303003"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "1119302008"
+                }
+            ]
+        },
+        {
+            "name": "property",
+            "part": [
+                {
+                    "name": "code",
+                    "valueString": "child"
+                },
+                {
+                    "name": "value",
+                    "valueCode": "1017214008"
+                }
+            ]
+        }
+    ]
+}
