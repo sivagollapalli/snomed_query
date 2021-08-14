@@ -23,7 +23,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+	SnomedQuery::ValueSet.descendants_of(46635009) # Returns a value set which are decendents of Diabetes mellitus Type 1
+
+Currently supported methods are `descendants_or_self_of` , `child_of`, `child_or_self_of`, `ancestors_of`, `ancestors_or_self_of`, `parent_of`, `parent_or_self_of`
+    
+	query = "<281666001|family history of disorder|:246090004|associated finding|=22298006|myocardial infarction|"
+	SnomedQuery::ValueSet.raw_query(query) # When you want to query with complex ECL
+
+#
+    SnomedQuery::CodeSystem.lookup(840539006) # Returns concept details based on identifier
+    SnomedQuery::CodeSystem.synonyms(840539006) # Returns synonyms for a given concept
+    
 
 ## Development
 
