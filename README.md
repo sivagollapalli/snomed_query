@@ -23,6 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
+	$ export SNOMED_SERVER_URL = 'http://localhost:8080'
 	SnomedQuery::ValueSet.descendants_of(46635009) # Returns a value set which are decendents of Diabetes mellitus Type 1
 
 Currently supported methods are `descendants_or_self_of` , `child_of`, `child_or_self_of`, `ancestors_of`, `ancestors_or_self_of`, `parent_of`, `parent_or_self_of`
